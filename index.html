@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <link rel="preconnect" href="./Poppins-Regular.ttf">
+    <title>Sing-up Form</title>
+</head>
+<body>
+  <main>
+    <header class="header">
+       <h1>Learn to code by watching others</h1>
+       <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+    </header>
+    <section class="section">
+      <div class="head" >
+        <p>Try it free 7 days <span>then $20/mo. thereafter</span></p>
+      </div>
+      <div class="form">
+         <form method="post"> <!--este pattern de los input text me dice que minimo hay que colocar 3 letra, es asi xq para html 5 ya es diferente-->
+           <input class="inp" id="name" type="text" pattern=".*\S.{3,}.*" value="Name" onfocus="this.value=' '" oninvalid="mi()" onchange="valida()" required> <!--con este onfocus y con this.value vacio hago que el input borre el texto y ponga espacio para escribir -->
+             <div class="error" style="display:none;" id="er1">
+              <img src="images/icon-error.svg" alt="icon">
+              <div id="show" > First name cannot be empty</div> <!--debo ponr el div para el mensaje de error-->
+            </div>
+           <input class="inp" id="last" type="text" pattern=".*\S.{3,}.*" value="Last Name" onfocus="this.value=' '" oninvalid="mis()" onchange="valid()" required>
+           <div class="error" style="display:none;" id="er2" >
+            <img src="images/icon-error.svg" alt="icon">
+            <div id="show" > Last Name cannot be empty</div> <!--debo ponr el div para el mensaje de error-->
+          </div>
+           <input class="inp" id="mail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}" value="Email Address" onfocus="this.value=' '" oninvalid="mista()" onchange="vali()" required>
+           <div class="error" style="display:none;" id="er3" >
+            <img src="images/icon-error.svg" alt="icon">
+            <div id="show" > Looks like this is not an email</div> <!--debo ponr el div para el mensaje de error-->
+          </div>
+            <input class="inp" id="Password" type="text" pattern=".*\S.{3,}.*"  value="Password" onfocus="this.value=' '" oninvalid="mistake()" onchange="val()" required>
+           <div class="error" style="display:none;" id="er4">
+            <img src="images/icon-error.svg" alt="icon">
+            <div id="show" > Password cannot be empty</div> <!--debo ponr el div para el mensaje de error-->
+           </div>
+            <input class="inp" id="submit" type="submit" value="CLAIM YOUR FREE TRIAL">
+            <!-- el type  y el pattern me da la estructura para que el usuario ponga el input bien . la estructura del pattern se une por un +-->
+          <!-- el onvalid me permie disparar una function que haga dependiendo de la validez de la info que ponga el usario en el input-->
+           <p>By clicking the button you are agreeing to our <span>Terms and services</span></p>
+         </form>
+           
+       </div>
+      </section>
+    </main>
+    <script src="jscript.js" > </script> 
+</body>
+</html>

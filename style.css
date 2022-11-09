@@ -1,0 +1,292 @@
+body {
+    width: 1440px;
+    margin: 0px;
+    padding: 0px;
+    background-image: url("images/bg-intro-desktop.png");
+    background-color: hsl(0, 100%, 74%) 
+}  /* si voy a colorear una background image en el body solo debo poner background color */
+
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./Poppins-Regular.ttf");
+}
+
+main {
+    font-family: "Poppins";
+    display:flex;
+    height: 100%;
+    width: 100%; /* mejor acomodar con % el tamaño de la oag
+    al main o div que envuelve todo el code darle 100% y a los
+    demas acomodarles margin left y rigth con % para centar, asi
+    acomodo para diferentes size de screens, a las div dentro de main
+    tbn darles width con % para acomodarlas */
+}
+
+
+.header {
+    padding: 160px 0px 15px 0px;
+    color: white ;
+    margin: 100px 0px 100px 0px;
+    width: 50%; /* recordar bien que manejando porcentaje si coloco varios div internos que sumen mas de 100% se me sale del background */
+    margin-left: 10%;
+}
+
+.header h1 {
+    font-size: 48px;
+    line-height: 13mm;
+    font-weight: 700;
+    padding-right: 30px;
+}
+
+.header p {
+    font-weight: 600;
+}
+
+.section {
+   padding: 0px 0px 100px 10px;
+   margin: 0px 0px 10px 20px;
+   margin-top: 4%;
+   margin-bottom: 4%;
+   width: 50%; 
+   margin-right: 10%;
+ 
+}
+
+.head {
+    color: white;
+    background-color: hsl(248, 32%, 49%);
+    height: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+    border-radius: 10px;
+    filter: drop-shadow(1px 8px 0px rgba(49, 49, 49, 0.2)); /* asi añado sombra sombre un svg o una imágen, el ultimo valor es la opacidad que me da el transparente*/
+}
+
+.head p {
+    padding-top: 17px;
+    font-weight: bolder;
+}
+
+.head span {
+ color: hsl(246, 25%, 77%);
+}
+
+.form {
+    display: flex;
+    background-color: white;
+    padding-top: 30px;
+    width: 100%;
+    height: 100%; /* heigth y width del 100% para background ocupe todos los elmentos internos */
+    border-radius: 10px;
+    filter: drop-shadow(1px 8px 0px rgba(49, 49, 49, 0.2)); /* asi añado sombra sombre un svg o una imágen, el ultimo valor es la opacidad que me da el transparente*/
+}
+
+.form input {
+    display:inline-block ;
+    width: 84%;
+    margin: 10px 28px;
+    height: 11%; 
+    padding-left: 0.6cm;
+    color: rgb(131, 130, 130) ;
+    font-weight: 700;
+    border-radius: 8px;
+    font-size: 14px;
+    border-color: rgb(223, 221, 221) ;
+    border-style: solid; /* con border color y border style solid le doy color a todo el borde del elmentos */
+}
+
+.form input:focus {
+    outline: none !important; 
+    border:1px solid hsl(252, 32%, 39%);
+    color: rgb(48, 47, 47);
+} /* asi edito input o text area cuando lo estoy llenando */
+
+
+.form p{
+    width: 84%;
+    display: inline-block;
+    color: hsl(246, 25%, 77%);
+    padding: 0px 30px 70px 45px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form span {
+    color: hsl(0, 100%, 74%) ;
+}
+
+
+#submit {
+   width: 89%;
+    height: 55px; 
+    margin-top: 30px;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.25ch;
+    border-radius: 8px;
+    border-color: hsl(154, 58%, 45%) ;
+    filter: drop-shadow(1px 2px 0px hsl(154, 58%, 45%));
+} /*  con los ultimos 3 hago sobresalir al boton */
+
+#submit:hover {
+    background-color: hsl(154, 75%, 66%) ;
+    filter: none;
+    border-color: hsl(154, 75%, 66%);
+    cursor: url("pointer.png"), auto;
+}
+
+
+.error {
+    color: hsl(0, 100%, 74%) ;
+    padding: 0px 40px 10px 0px;
+    font-weight: 600;
+    font-size: 12px;
+    font-style: italic;
+    text-align: right;
+    margin-top: -8%;
+}
+.error img {
+    margin: -5px 15px 10px 0px;
+}
+
+
+@media (max-width: 400px ) {
+    body {
+        width: 375px;
+        margin: 0px;
+        padding: 0px;
+        background-image: url("images/bg-intro-desktop.png");
+        background-color: hsl(0, 100%, 74%) 
+    }  /* si voy a colorear una background image en el body solo debo poner background color */
+    
+    
+    main {
+        display:inline-block;
+        width: 90%; 
+        margin-left: 5%;
+        margin-right:5%;
+        text-align: center;
+    }
+    
+    
+    .header {
+        padding: 10px 0px 10px 0px;
+        color: white ;
+        margin: 10px 0px 50px 0px;
+        width: 90%; 
+    }
+    
+    .header h1 {
+        font-size: 30px;
+        line-height: 10mm;
+        font-weight: 600;
+        padding-right: 0px;
+    }
+    
+    .header p {
+        font-weight: 500;
+        font-size: 15px;
+    }
+    
+    .section {
+       padding: 0px 0px 30px 0px;
+       margin: 0px 0px 0px 0px;
+       margin-top: -10%;
+       margin-bottom: 4%;
+       width: 90%; 
+       margin-right: 10%;
+     
+    }
+    
+    .head {
+        color: white;
+        background-color: hsl(248, 32%, 49%);
+        height: 80px;
+        margin-bottom: 30px;
+        text-align: center;
+        border-radius: 10px;
+        filter: drop-shadow(1px 8px 0px rgba(49, 49, 49, 0.2)); /* asi añado sombra sombre un svg o una imágen, el ultimo valor es la opacidad que me da el transparente*/
+    }
+    
+    .head p {
+        padding: 15px 40px 0px 30px;
+        font-weight: bolder;
+        text-align: center;
+    }
+    
+    .form {
+        padding-top: 30px;
+        width: 100%;
+        height: 100%; /* heigth y width del 100% para background ocupe todos los elmentos internos */
+        border-radius: 10px;
+        filter: drop-shadow(1px 8px 0px rgba(49, 49, 49, 0.2)); /* asi añado sombra sombre un svg o una imágen, el ultimo valor es la opacidad que me da el transparente*/
+    }
+    
+    .form input {
+        display:inline-block ;
+        width: 83%;
+        margin: 10px 20px;
+        height: 45px;  
+        padding-left: 0.2cm;
+        color: rgb(131, 130, 130) ;
+        font-weight: 700;
+        border-radius: 8px;
+        font-size: 14px;
+        border-color: rgb(223, 221, 221) ;
+        border-style: solid; 
+    }
+    
+    .form input:focus {
+        outline: none !important; 
+        border:1px solid hsl(252, 32%, 39%);
+        color: rgb(48, 47, 47);
+    } /* asi edito input o text area cuando lo estoy llenando */
+    
+    
+    .form p{
+        width: 80%;
+        display: inline-block;
+        color: hsl(246, 25%, 77%);
+        padding: 0px 30px 20px 30px;
+        text-align: center;
+        font-size: 10px;
+        font-weight: 600;
+    }
+    
+    
+    #submit {
+       width: 88%;
+        height: 45px; 
+        margin-top: 20px;
+        background-color: hsl(154, 59%, 51%);
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.25ch;
+        border-radius: 8px;
+        border-color: hsl(154, 58%, 45%) ;
+        filter: drop-shadow(1px 2px 0px hsl(154, 58%, 45%));
+    } /*  con los ultimos 3 hago sobresalir al boton */
+    
+    
+    .error {
+        color: hsl(0, 100%, 74%) ;
+        padding: 0px 40px 10px 0px;
+        font-weight: 400;
+        font-size: 12px;
+        font-style: italic;
+        text-align: right;
+        margin-top: -8%;
+    }
+    .error img {
+        margin: -20px 5px 10px 0px;
+    }
+}
+
+
+
+
